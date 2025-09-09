@@ -69,7 +69,7 @@ public class Employee_Payroll_System {
                 int rows = pst.executeUpdate();
                 System.out.println(rows > 0 ? "Employee added successfully!" : "Insert failed.");
             } catch (SQLIntegrityConstraintViolationException dup) {
-                System.out.println("⚠️ Employee ID already exists.");
+                System.out.println("Employee ID already exists.");
             } catch (SQLException e) {
                 e.printStackTrace();
             }
