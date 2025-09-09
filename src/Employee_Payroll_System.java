@@ -67,7 +67,7 @@ public class Employee_Payroll_System {
                 pst.setDouble(6, deduction);
 
                 int rows = pst.executeUpdate();
-                System.out.println(rows > 0 ? "✅ Employee added successfully!" : "❌ Insert failed.");
+                System.out.println(rows > 0 ? "Employee added successfully!" : "Insert failed.");
             } catch (SQLIntegrityConstraintViolationException dup) {
                 System.out.println("⚠️ Employee ID already exists.");
             } catch (SQLException e) {
@@ -120,7 +120,7 @@ public class Employee_Payroll_System {
                                 rs.getDouble("allowance"),
                                 rs.getDouble("deduction"));
                     } else {
-                        System.out.println("⚠️ Employee not found.");
+                        System.out.println("Employee not found.");
                     }
                 }
             } catch (SQLException e) {
@@ -174,7 +174,7 @@ public class Employee_Payroll_System {
 
                         System.out.printf("Net Salary for Employee ID %d: ₹%.2f%n", id, net);
                     } else {
-                        System.out.println("⚠️ Employee not found.");
+                        System.out.println(" Employee not found.");
                     }
                 }
             } catch (SQLException e) {
