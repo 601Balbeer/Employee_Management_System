@@ -4,10 +4,10 @@ import java.util.Scanner;
 public class Employee_Payroll_System {
 
 
-        // === DB Config ===
+        
         private static final String URL = "jdbc:mysql://localhost:3306/PayrollDB";
-        private static final String USER = "root";  // your MySQL username
-        private static final String PASS = "Balbeer@1333";  // your MySQL password
+        private static final String USER = "root"; 
+        private static final String PASS = "Balbeer@1333";  
 
         private static final Scanner sc = new Scanner(System.in);
 
@@ -24,7 +24,7 @@ public class Employee_Payroll_System {
                 System.out.println("0. Exit");
                 System.out.print("Enter your choice: ");
                 choice = sc.nextInt();
-                sc.nextLine(); // consume newline
+                sc.nextLine(); 
 
                 switch (choice) {
                     case 1 : addEmployee();break;
@@ -149,7 +149,7 @@ public class Employee_Payroll_System {
                 pst.setInt(4, id);
 
                 int rows = pst.executeUpdate();
-                System.out.println(rows > 0 ? "✅ Salary updated successfully." : "⚠️ Employee not found.");
+                System.out.println(rows > 0 ? "Salary updated successfully." : " Employee not found.");
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -193,7 +193,7 @@ public class Employee_Payroll_System {
 
                 pst.setInt(1, id);
                 int rows = pst.executeUpdate();
-                System.out.println(rows > 0 ? "✅ Employee deleted successfully." : "⚠️ Employee not found.");
+                System.out.println(rows > 0 ? "Employee deleted successfully." : " Employee not found.");
             } catch (SQLException e) {
                 e.printStackTrace();
             }
